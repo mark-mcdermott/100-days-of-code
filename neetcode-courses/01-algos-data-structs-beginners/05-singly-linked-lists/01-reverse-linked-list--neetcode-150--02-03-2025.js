@@ -1,15 +1,31 @@
-const { ListNode, SinglyLinkedList } = require('../SinglyLinkedList.js')
+const { ListNode, SinglyLinkedList } = require('./SinglyLinkedList.js')
 
 class Solution {
+  getTail(head) {
+    let curr = head
+    while (curr.next != null) {
+      curr = curr.next
+    }
+    return curr
+  }
+
   /**
    * @param {ListNode} head
    * @return {ListNode}
    */
   reverseList(head) {
-    let reversedNodes = []
-    head.map(node => { reversedNodes.push(node) })
-    let newHead = reversedNodes.slice(reversedNodes.length - 1)
-    return head
+    let curr = head
+    let next = head.next
+    while (next != null) {
+      
+    }
+    // let reversedHead = new SinglyLinkedList(head.)
+    // let curr = head
+    // do {
+
+    // } while (curr.next != null) {
+
+    // return newHead
   }
 }
 
@@ -19,7 +35,12 @@ list.insertTail(2)
 list.insertTail(3)
 list.insertHead(4)
 console.log(`initial list: ${list.getValues()}`)
-console.log(`reversed list: ${list.getValues(new Solution.reverseList(list))}`)
+
+const solution = new Solution
+const reversedList = solution.reverseList(list)
+
+// const reversedArr = reversedList.getValues()
+// console.log(`reversed list: ${reversedArr}`)
 
 
 // let solution = new Solution(list)
