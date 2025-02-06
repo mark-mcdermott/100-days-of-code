@@ -1,4 +1,4 @@
-const { ListNode, LinkedList } = require('./../../write-the-data-structure-problem/LinkedList.js')
+const { ListNode, SinglyLinkedList } = require('../SinglyLinkedList.js')
 
 class Solution {
   /**
@@ -13,12 +13,13 @@ class Solution {
   }
 }
 
-let list = new LinkedList(0)
+let list = new SinglyLinkedList(0)
 list.insertTail(1)
 list.insertTail(2)
 list.insertTail(3)
 list.insertHead(4)
 console.log(`initial list: ${list.getValues()}`)
+console.log(`reversed list: ${list.getValues(new Solution.reverseList(list))}`)
 
 
 // let solution = new Solution(list)

@@ -31,6 +31,10 @@ class Solution {
         return false
       }
     }
-
 }
+
+// const s = '({[]})'
+// const solution = new Solution()
+// console.log(solution.isValid(s))
+
 module.exports = Solution

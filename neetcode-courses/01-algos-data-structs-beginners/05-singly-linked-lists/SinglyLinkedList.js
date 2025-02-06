@@ -5,7 +5,7 @@ class ListNode {
   }
 }
 
-class LinkedList {
+class SinglyLinkedList {
   constructor(val) {
     this.head = new ListNode(val)
     this.tail = this.head
@@ -96,4 +96,19 @@ class LinkedList {
   }
 }
 
-module.exports = { ListNode, LinkedList }
+const list = new LinkedList
+
+// // example 1
+// list.insertHead(1)
+// list.insertTail(2)
+// list.insertHead(0)
+// list.remove(1)
+// console.log(list.getValues())
+
+// // example 2
+// list.insertHead(1)
+// list.insertHead(2)
+// list.get(5)
+// console.log(list.getValues())
+
+module.exports = { ListNode, SinglyLinkedList }
