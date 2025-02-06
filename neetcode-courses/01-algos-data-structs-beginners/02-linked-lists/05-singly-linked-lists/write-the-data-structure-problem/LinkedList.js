@@ -6,8 +6,8 @@ class ListNode {
 }
 
 class LinkedList {
-  constructor() {
-    this.head = new ListNode(-1)
+  constructor(val) {
+    this.head = new ListNode(val)
     this.tail = this.head
   }
 
@@ -33,11 +33,8 @@ class LinkedList {
    */
   insertHead(val) {
     const newNode = new ListNode(val)
-    newNode.next = this.head.next
-    this.head.next = newNode
-    if (!newNode.next) {
-      this.tail = newNode
-    }
+    newNode.next = this.head
+    this.head = newNode
   }
 
   /**
@@ -54,20 +51,34 @@ class LinkedList {
    * @return {boolean}
    */
   remove(index) {
-    let i = 0
     let curr = this.head
-    while (i < index && curr) {
-      i++
-      curr = curr.next
-    }
-      if (curr && curr.next) {
-        if (curr.next === this.tail) {
-          this.tail = curr;
-        }
-        curr.next = curr.next.next
-        return true
+    if (index == 0) {
+      if (curr.next == null)
+        return false
+      else {
+        this.head = curr.next
+        curr.next = null
       }
+    }
+    if (index >= this.getValues().length) {
       return false
+    }
+
+    for (let i = 0; i < index; i++) {
+      if (i == index - 1) {
+        let deletedNode = curr.next
+        if (curr.next.next) {
+          curr.next = curr.next.next
+        } else {
+          curr.next = null
+          this.tail = curr
+        }
+        deletedNode.next = null
+        return true
+      } else {
+        curr = curr.next
+      }
+    }
   }
 
 
@@ -75,7 +86,7 @@ class LinkedList {
    * @return {number[]}
    */
   getValues() {
-    let curr = this.head.next
+    let curr = this.head
     const res = []
     while (curr) {
       res.push(curr.val)
