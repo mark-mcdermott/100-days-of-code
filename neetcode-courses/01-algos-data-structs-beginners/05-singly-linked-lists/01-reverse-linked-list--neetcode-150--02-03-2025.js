@@ -1,4 +1,4 @@
-const { ListNode, SinglyLinkedList } = require('./SinglyLinkedList.js')
+const { ListNode, SinglyLinkedList, CreateLinkedList } = require('./SinglyLinkedList.js')
 
 class Solution {
   /**
@@ -18,17 +18,8 @@ class Solution {
     return prev
   }
 
-  getInitialList() {
-    let list = new SinglyLinkedList(0)
-    list.insertTail(1)
-    list.insertTail(2)
-    list.insertTail(3)
-    list.insertTail(4)
-    return list
-  }
-
   getTail(head) {
-    let curr = list.head
+    let curr = head
     while (curr.next) {
       curr = curr.next
     }
@@ -37,7 +28,9 @@ class Solution {
 }
 
 const solution = new Solution
-const list = solution.getInitialList()
+const getInitialList = new CreateLinkedList(1,2,3,4)
+
+const list = getInitialList.list
 console.log(`initial list: ${list.getValues()}`)
 
 const reversedList = solution.reverseList(list.head)

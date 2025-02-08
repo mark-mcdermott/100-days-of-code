@@ -1,7 +1,16 @@
 class ListNode {
-  constructor(val) {
+  constructor(val = 0, next = null) {
     this.val = val
-    this.next = null
+    this.next = next
+  }
+}
+
+class CreateLinkedList {
+  constructor(...args) {
+    this.list = new SinglyLinkedList(args[0])
+    for (let i = 1; i < args.length; i++) {
+      this.list.insertTail(args[i])
+    }
   }
 }
 
@@ -16,7 +25,7 @@ class SinglyLinkedList {
    * @return {number}
    */
   get(index) {
-    let curr = this.head.next
+    let curr = this.head
     let i = 0
     while (curr) {
       if (i === index) {
@@ -109,4 +118,4 @@ class SinglyLinkedList {
 // list.get(5)
 // console.log(list.getValues())
 
-module.exports = { ListNode, SinglyLinkedList }
+module.exports = { ListNode, SinglyLinkedList, CreateLinkedList }
