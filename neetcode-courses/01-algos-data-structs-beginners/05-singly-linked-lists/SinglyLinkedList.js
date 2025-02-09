@@ -90,6 +90,11 @@ class SinglyLinkedList {
     }
   }
 
+  removeOnlyNode() {
+    this.head = null
+    this.tail = null
+  }
+
 
   /**
    * @return {number[]}
