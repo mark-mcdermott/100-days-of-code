@@ -1,0 +1,14 @@
+{
+  "name": "06-doubly-linked-lists",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01-design-linked-list--leetcode-num-707--02-03-2025.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "vitest": "^3.0.5"
+  }
+}

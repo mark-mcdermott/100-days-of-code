@@ -18,3 +18,6 @@ Finished reverse a singly linked list problem in neetcode beginner DSA course [w
 
 ### R1D5
 Finished "merge two sorted lists" problem in neetcode Beginner DSA course [work](https://github.com/mark-mcdermott/100-days-of-code/blob/master/neetcode-courses/01-algos-data-structs-beginners/05-singly-linked-lists/02-merge-two-sorted-lists--neetcode-150--02-03-2025.js)
+
+### R1D6
+Finished "Design [Doubly] Linked List" problem in neetcode Beginner DSA course. Used vitest today for test driven development and unit testing class methods. [problem](https://github.com/mark-mcdermott/100-days-of-code/blob/master/neetcode-courses/01-algos-data-structs-beginners/06-doubly-linked-lists/01-design-linked-list--leetcode-num-707--02-03-2025.test.js) [data structure](https://github.com/mark-mcdermott/100-days-of-code/blob/master/neetcode-courses/01-algos-data-structs-beginners/06-doubly-linked-lists/DoublyLinkedList.js) [vitests](https://github.com/mark-mcdermott/100-days-of-code/blob/master/neetcode-courses/01-algos-data-structs-beginners/06-doubly-linked-lists/DoublyLinkedList.test.js)
