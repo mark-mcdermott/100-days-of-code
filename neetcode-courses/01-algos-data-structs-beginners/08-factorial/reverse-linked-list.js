@@ -6,34 +6,20 @@ class ListNode {
 }
 
 class Solution {
-  constructor() {
-    this.cnt = 0
-  }
   
   reverseList(head) {
-    if (head.next != null && this.cnt < 2) {
-      // console.log()
-      // this.printList(head)
-      console.log()
-      console.log(head.next)
-      const next = head.next
-      // console.log(next)
-      // console.log(`next.next: ${this.printList(next)}`)
-      head.next.next = head
-      head.next = null
-      this.cnt++
-      this.reverseList(next)
-    } else {
+    let curr = head
+    if (!curr) {
       return head
-    } 
-  }
-
-  toString() {
-    return `val: ${this.val}, next: {this.next.val}`
-  }
-
-  debugString() {
-    return `val: ${this}`
+    }
+    let next = curr.next
+    if (!next) {
+      return head
+    }
+    const newHead = this.reverseList(next)
+    next.next = curr
+    curr.next = null
+    return newHead
   }
 
   printList(head) {
@@ -69,10 +55,6 @@ head.next = one
 
 solution = new Solution()
 const newHead = solution.reverseList(head)
-// console.log(newHead)
+solution.printList(newHead)
+console.log(newHead)
 
-// let node = newHead
-// do {
-//   console.log(node)
-//   node = node.next
-// } while (node.next != null)
